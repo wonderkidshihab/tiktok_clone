@@ -1,51 +1,45 @@
 {
   "project_info": {
-    "project_number": "885100442553",
-    "project_id": "tiktok-devgony",
-    "storage_bucket": "tiktok-devgony.appspot.com"
+    "project_number": "980365042776",
+    "project_id": "deentok",
+    "storage_bucket": "deentok.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:885100442553:android:e4410c0c204bbf2fbebc68",
+        "mobilesdk_app_id": "1:980365042776:android:96a217c6f8bccdcb18562d",
         "android_client_info": {
-          "package_name": "com.example.tiktok_clone"
+          "package_name": "com.wonderkid.deentok"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "885100442553-jg1dbuima9o33bpbrki5fskft1b6p5ea.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.tiktok_clone",
-            "certificate_hash": "4f327207ef1396e9529bee07085153bae66cd0ba"
-          }
-        },
-        {
-          "client_id": "885100442553-p8o478g7cam7ogqbdl3q5140gsl6so7f.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDkyZACnYxqA1OhQqP6wej8oXa9tySjAhk"
+          "current_key": "AIzaSyA2hk6CBBBycNDrrYB3jbUJySorwaveTNk"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "885100442553-p8o478g7cam7ogqbdl3q5140gsl6so7f.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "885100442553-a6hk70eg76b92sho3k6u3p54l71a8kvb.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.tiktokCloneHenry"
-              }
-            }
-          ]
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:980365042776:android:22747c6f494269fa18562d",
+        "android_client_info": {
+          "package_name": "com.wonderkid.deentok"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2hk6CBBBycNDrrYB3jbUJySorwaveTNk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
         }
       }
     }

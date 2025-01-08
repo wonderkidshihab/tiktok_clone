@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:tiktok_clone/features/users/models/user_profile_model.dart';
-import 'package:tiktok_clone/features/users/repos/user_repo.dart';
+import 'package:deentok/features/users/models/user_profile_model.dart';
+import 'package:deentok/features/users/repos/user_repo.dart';
 
 import '../../authentication/repos/authentication_repo.dart';
 
@@ -42,16 +42,15 @@ class UsersViewModel extends AsyncNotifier<UserProfileModel> {
       uid: credential.user!.uid,
       name: name,
       birthday: birthday,
-      hasAvatar: false,
     );
     await _usersRepository.createProfile(profile);
     state = AsyncValue.data(profile);
   }
 
-  Future<void> onAvatarUpload() async {
+  Future<void> onAvatarUpload(String url) async {
     if (state.value == null) return;
-    state = AsyncValue.data(state.value!.copyWith(hasAvatar: true));
-    await _usersRepository.updateUser(state.value!.uid, {"hasAvatar": true});
+    state = AsyncValue.data(state.value!.copyWith(avatarUrl: url));
+    await _usersRepository.updateUser(state.value!.uid, {"avatarUrl": url});
   }
 
   Future<void> updateProfile(String? bio, String? link) async {

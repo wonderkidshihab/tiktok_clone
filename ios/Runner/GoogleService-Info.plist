@@ -2,22 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CLIENT_ID</key>
-	<string>885100442553-a6hk70eg76b92sho3k6u3p54l71a8kvb.apps.googleusercontent.com</string>
-	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.885100442553-a6hk70eg76b92sho3k6u3p54l71a8kvb</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBx1WQwL6yPtrqt3HLNE0k9ZQzI8Y9lzBg</string>
+	<string>AIzaSyCqZI9WoFP-Z05BWndoEJ5FnHoGVa2_SUk</string>
 	<key>GCM_SENDER_ID</key>
-	<string>885100442553</string>
+	<string>980365042776</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.example.tiktokCloneHenry</string>
 	<key>PROJECT_ID</key>
-	<string>tiktok-devgony</string>
+	<string>deentok</string>
 	<key>STORAGE_BUCKET</key>
-	<string>tiktok-devgony.appspot.com</string>
+	<string>deentok.firebasestorage.app</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:885100442553:ios:ad5fcc2577afb218bebc68</string>
+	<string>1:980365042776:ios:90264c6a223abe9018562d</string>
 </dict>
 </plist>

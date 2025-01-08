@@ -1,6 +1,6 @@
 {
-    "name": "tiktok_clone",
-    "short_name": "tiktok_clone",
+    "name": "deentok",
+    "short_name": "deentok",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

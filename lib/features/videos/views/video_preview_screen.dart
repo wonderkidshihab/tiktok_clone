@@ -4,7 +4,6 @@ import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:gallery_saver/gallery_saver.dart';
 import 'package:video_player/video_player.dart';
 
 import '../view_models/upload_video_view_model.dart';
@@ -25,7 +24,6 @@ class VideoPreviewScreen extends ConsumerStatefulWidget {
 
 class VideoPreviewScreenState extends ConsumerState<VideoPreviewScreen> {
   late final VideoPlayerController _videoPlayerController;
-  bool _savedVideo = false;
   final TextEditingController _titleController = TextEditingController();
   final TextEditingController _descriptionController = TextEditingController();
 
@@ -54,18 +52,18 @@ class VideoPreviewScreenState extends ConsumerState<VideoPreviewScreen> {
     super.dispose();
   }
 
-  Future<void> _saveToGallery() async {
-    if (_savedVideo) return;
+  // Future<void> _saveToGallery() async {
+  //   if (_savedVideo) return;
 
-    await GallerySaver.saveVideo(
-      widget.video.path,
-      albumName: "TikTok Clone!",
-    );
+  //   await GallerySaver.saveVideo(
+  //     widget.video.path,
+  //     albumName: "TikTok Clone!",
+  //   );
 
-    _savedVideo = true;
+  //   _savedVideo = true;
 
-    setState(() {});
-  }
+  //   setState(() {});
+  // }
 
   void _onUploadPressed() async {
     ref.read(uploadVideoProvider.notifier).uploadVideo(
@@ -83,15 +81,15 @@ class VideoPreviewScreenState extends ConsumerState<VideoPreviewScreen> {
       appBar: AppBar(
         title: const Text('Preview video'),
         actions: [
-          if (!widget.isPicked)
-            IconButton(
-              onPressed: _saveToGallery,
-              icon: FaIcon(
-                _savedVideo
-                    ? FontAwesomeIcons.check
-                    : FontAwesomeIcons.download,
-              ),
-            ),
+          // if (!widget.isPicked)
+          //   IconButton(
+          //     onPressed: _saveToGallery,
+          //     icon: FaIcon(
+          //       _savedVideo
+          //           ? FontAwesomeIcons.check
+          //           : FontAwesomeIcons.download,
+          //     ),
+          //   ),
           IconButton(
             onPressed: ref.watch(uploadVideoProvider).isLoading
                 ? () {}

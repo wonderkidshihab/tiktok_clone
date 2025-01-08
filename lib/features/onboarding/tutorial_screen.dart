@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:tiktok_clone/constants/gaps.dart';
-import 'package:tiktok_clone/constants/sizes.dart';
+import 'package:deentok/constants/gaps.dart';
+import 'package:deentok/constants/sizes.dart';
 
 import '../../common/widgets/dark_config/dark_mode_config.dart';
 

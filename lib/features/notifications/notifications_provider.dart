@@ -5,8 +5,8 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:tiktok_clone/features/authentication/repos/authentication_repo.dart';
-import 'package:tiktok_clone/features/inbox/views/chats_screen.dart';
+import 'package:deentok/features/authentication/repos/authentication_repo.dart';
+import 'package:deentok/features/inbox/views/chats_screen.dart';
 
 import '../videos/views/video_recording_screen.dart';
 

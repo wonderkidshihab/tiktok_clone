@@ -6,10 +6,10 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:tiktok_clone/constants/gaps.dart';
-import 'package:tiktok_clone/constants/sizes.dart';
-import 'package:tiktok_clone/features/videos/views/video_preview_screen.dart';
-import 'package:tiktok_clone/features/videos/views/widgets/video_flash_button.dart';
+import 'package:deentok/constants/gaps.dart';
+import 'package:deentok/constants/sizes.dart';
+import 'package:deentok/features/videos/views/video_preview_screen.dart';
+import 'package:deentok/features/videos/views/widgets/video_flash_button.dart';
 
 class VideoRecordingScreen extends StatefulWidget {
   static const String routeName = "postVideo";

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
-import 'package:tiktok_clone/constants/sizes.dart';
+import 'package:deentok/constants/sizes.dart';
+
 import 'chat_detail_screen.dart';
 
 class ChatsScreen extends StatefulWidget {
@@ -50,7 +51,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
   void _onChatTap(int index) {
     context.pushNamed(
       ChatDetailScreen.routeName,
-      params: {"chatId": "$index"},
+      pathParameters: {"chatId": "$index"},
     );
   }
 
@@ -108,8 +109,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
           return FadeTransition(
             key: Key('$index'),
             opacity: animation,
-            child:
-                SizeTransition(sizeFactor: animation, child: _makeTile(index)),
+            child: SizeTransition(sizeFactor: animation, child: _makeTile(index)),
           );
         },
       ),

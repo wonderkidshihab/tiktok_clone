@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
-import 'package:tiktok_clone/constants/gaps.dart';
-import 'package:tiktok_clone/constants/sizes.dart';
-import 'package:tiktok_clone/features/authentication/views/widgets/auth_button.dart';
+import 'package:deentok/constants/gaps.dart';
+import 'package:deentok/constants/sizes.dart';
+import 'package:deentok/features/authentication/views/widgets/auth_button.dart';
 
 import '../../../common/widgets/dark_config/dark_mode_config.dart';
 import '../../../utils.dart';

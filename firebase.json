@@ -1,17 +1,41 @@
 {
-  "functions": [
-    {
-      "source": "functions",
-      "codebase": "default",
-      "ignore": [
-        "node_modules",
-        ".git",
-        "firebase-debug.log",
-        "firebase-debug.*.log"
-      ],
-      "predeploy": [
-        "npm --prefix \"$RESOURCE_DIR\" run build"
-      ]
+    "flutter": {
+        "platforms": {
+            "android": {
+                "default": {
+                    "projectId": "deentok",
+                    "appId": "1:980365042776:android:96a217c6f8bccdcb18562d",
+                    "fileOutput": "android/app/google-services.json"
+                }
+            },
+            "ios": {
+                "default": {
+                    "projectId": "deentok",
+                    "appId": "1:980365042776:ios:90264c6a223abe9018562d",
+                    "uploadDebugSymbols": false,
+                    "fileOutput": "ios/Runner/GoogleService-Info.plist"
+                }
+            },
+            "macos": {
+                "default": {
+                    "projectId": "deentok",
+                    "appId": "1:980365042776:ios:15a9166d9edd486618562d",
+                    "uploadDebugSymbols": false,
+                    "fileOutput": "macos/Runner/GoogleService-Info.plist"
+                }
+            },
+            "dart": {
+                "lib/firebase_options.dart": {
+                    "projectId": "deentok",
+                    "configurations": {
+                        "android": "1:980365042776:android:96a217c6f8bccdcb18562d",
+                        "ios": "1:980365042776:ios:90264c6a223abe9018562d",
+                        "macos": "1:980365042776:ios:15a9166d9edd486618562d",
+                        "web": "1:980365042776:web:478523c71838a53518562d",
+                        "windows": "1:980365042776:web:f8fb79fe5e2df38418562d"
+                    }
+                }
+            }
+        }
     }
-  ]
 }

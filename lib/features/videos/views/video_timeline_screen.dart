@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:tiktok_clone/features/videos/views/widgets/video_post.dart';
+import 'package:deentok/features/videos/views/widgets/video_post.dart';
 
 import '../view_models/timeline_view_model.dart';
 

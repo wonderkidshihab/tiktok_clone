@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:tiktok_clone/common/widgets/dark_config/dark_mode_config.dart';
+import 'package:deentok/common/widgets/dark_config/dark_mode_config.dart';
 
 import '../../../../constants/gaps.dart';
 

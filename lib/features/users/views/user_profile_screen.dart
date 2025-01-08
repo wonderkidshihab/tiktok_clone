@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:tiktok_clone/constants/breakpoints.dart';
-import 'package:tiktok_clone/features/users/views/user_profile_edit_screen.dart';
-import 'package:tiktok_clone/features/users/views/widgets/avatar.dart';
+import 'package:deentok/constants/breakpoints.dart';
+import 'package:deentok/features/users/views/user_profile_edit_screen.dart';
+import 'package:deentok/features/users/views/widgets/avatar.dart';
 import '../../../constants/gaps.dart';
 import '../../../constants/sizes.dart';
-import 'package:tiktok_clone/features/users/views/widgets/persistent_tab_bar.dart';
+import 'package:deentok/features/users/views/widgets/persistent_tab_bar.dart';
 
 import '../../settings/settings_screen.dart';
 import '../view_models/users_view_model.dart';
@@ -101,7 +101,7 @@ class _UserProfileScreenState extends ConsumerState<UserProfileScreen> {
                                       Avatar(
                                         uid: data.uid,
                                         name: data.name,
-                                        hasAvatar: data.hasAvatar,
+                                        avatarUrl: data.avatarUrl,
                                       ),
                                       Gaps.v20,
                                       Row(

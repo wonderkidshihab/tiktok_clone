@@ -4,8 +4,8 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:tiktok_clone/features/authentication/repos/authentication_repo.dart';
-import 'package:tiktok_clone/features/videos/repos/videos_repo.dart';
+import 'package:deentok/features/authentication/repos/authentication_repo.dart';
+import 'package:deentok/features/videos/repos/videos_repo.dart';
 
 import '../../users/view_models/users_view_model.dart';
 import '../models/video_model.dart';
@@ -46,6 +46,7 @@ class UploadVideoViewModel extends AsyncNotifier<void> {
               comments: 0,
               createdAt: DateTime.now().millisecondsSinceEpoch,
               creator: userProfile.name,
+              creatorAvatar: userProfile.avatarUrl,
             ),
           );
           context.pop();

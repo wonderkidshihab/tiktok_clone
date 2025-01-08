@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:image_picker/image_picker.dart';
@@ -8,14 +9,14 @@ import '../../view_models/avatar_view_model.dart';
 
 class Avatar extends ConsumerWidget {
   final String name;
-  final bool hasAvatar;
+  final String? avatarUrl;
   final String uid;
 
   const Avatar({
     super.key,
     required this.name,
     required this.uid,
-    required this.hasAvatar,
+    this.avatarUrl,
   });
 
   Future<void> _onAvatarTap(WidgetRef ref) async {
@@ -48,9 +49,9 @@ class Avatar extends ConsumerWidget {
             )
           : CircleAvatar(
               radius: 50,
-              foregroundImage: hasAvatar
-                  ? NetworkImage(
-                      "https://firebasestorage.googleapis.com/v0/b/tiktok-devgony.appspot.com/o/avatars%2F$uid?alt=media&haha=${DateTime.now().toString()}",
+              foregroundImage: avatarUrl != null
+                  ? CachedNetworkImageProvider(
+                      avatarUrl!,
                     )
                   : null,
               child: Text(name),

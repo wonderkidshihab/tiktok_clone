@@ -1,13 +1,11 @@
+import 'package:deentok/common/widgets/dark_config/dark_mode_config.dart';
+import 'package:deentok/common/widgets/main_navigation/widgets/nav_tab.dart';
+import 'package:deentok/common/widgets/main_navigation/widgets/post_video_button.dart';
+import 'package:deentok/features/users/views/user_profile_screen.dart';
+import 'package:deentok/features/videos/views/video_timeline_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
-import 'package:tiktok_clone/common/widgets/dark_config/dark_mode_config.dart';
-import 'package:tiktok_clone/features/discover/discover_screen.dart';
-import 'package:tiktok_clone/features/inbox/views/inbox_screen.dart';
-import 'package:tiktok_clone/common/widgets/main_navigation/widgets/nav_tab.dart';
-import 'package:tiktok_clone/common/widgets/main_navigation/widgets/post_video_button.dart';
-import 'package:tiktok_clone/features/users/views/user_profile_screen.dart';
-import 'package:tiktok_clone/features/videos/views/video_timeline_screen.dart';
 
 import '../../../constants/gaps.dart';
 import '../../../constants/sizes.dart';
@@ -28,9 +26,9 @@ class MainNavigationScreen extends StatefulWidget {
 class _MainNavigationScreenState extends State<MainNavigationScreen> {
   final List<String> _tabs = [
     "home",
-    "discover",
+    // "discover",
     "xxxx",
-    "inbox",
+    // "inbox",
     "profile",
   ];
 
@@ -52,22 +50,21 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
     final isDark = darkModeConfig.value;
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor:
-          _selectedIndex == 0 || isDark ? Colors.black : Colors.white,
+      backgroundColor: _selectedIndex == 0 || isDark ? Colors.black : Colors.white,
       body: Stack(
         children: [
           Offstage(
             offstage: _selectedIndex != 0,
             child: const VideoTimelineScreen(),
           ),
-          Offstage(
-            offstage: _selectedIndex != 1,
-            child: const DiscoverScreen(),
-          ),
-          Offstage(
-            offstage: _selectedIndex != 3,
-            child: const InboxScreen(),
-          ),
+          // Offstage(
+          //   offstage: _selectedIndex != 1,
+          //   child: const DiscoverScreen(),
+          // ),
+          // Offstage(
+          //   offstage: _selectedIndex != 3,
+          //   child: const InboxScreen(),
+          // ),
           Offstage(
             offstage: _selectedIndex != 4,
             child: const UserProfileScreen(
@@ -96,29 +93,27 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
                   onTap: () => _onTap(0),
                   selectedIndex: _selectedIndex,
                 ),
-                NavTab(
-                  text: "Discover",
-                  isSelected: _selectedIndex == 1,
-                  icon: FontAwesomeIcons.compass,
-                  selectedIcon: FontAwesomeIcons.solidCompass,
-                  onTap: () => _onTap(1),
-                  selectedIndex: _selectedIndex,
-                ),
+                // NavTab(
+                //   text: "Discover",
+                //   isSelected: _selectedIndex == 1,
+                //   icon: FontAwesomeIcons.compass,
+                //   selectedIcon: FontAwesomeIcons.solidCompass,
+                //   onTap: () => _onTap(1),
+                //   selectedIndex: _selectedIndex,
+                // ),
                 Gaps.h24,
                 GestureDetector(
-                  child: PostVideoButton(
-                      onTap: _onPostVideoButtonTap,
-                      inverted: _selectedIndex != 0),
+                  child: PostVideoButton(onTap: _onPostVideoButtonTap, inverted: _selectedIndex != 0),
                 ),
                 Gaps.h24,
-                NavTab(
-                  text: "Inbox",
-                  isSelected: _selectedIndex == 3,
-                  icon: FontAwesomeIcons.message,
-                  selectedIcon: FontAwesomeIcons.solidMessage,
-                  onTap: () => _onTap(3),
-                  selectedIndex: _selectedIndex,
-                ),
+                // NavTab(
+                //   text: "Inbox",
+                //   isSelected: _selectedIndex == 3,
+                //   icon: FontAwesomeIcons.message,
+                //   selectedIcon: FontAwesomeIcons.solidMessage,
+                //   onTap: () => _onTap(3),
+                //   selectedIndex: _selectedIndex,
+                // ),
                 NavTab(
                   text: "Profile",
                   isSelected: _selectedIndex == 4,

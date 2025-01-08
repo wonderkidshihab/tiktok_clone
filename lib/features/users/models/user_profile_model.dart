@@ -5,7 +5,7 @@ class UserProfileModel {
   final String bio;
   final String link;
   final String birthday;
-  final bool hasAvatar;
+  final String? avatarUrl;
 
   UserProfileModel({
     required this.uid,
@@ -14,7 +14,7 @@ class UserProfileModel {
     required this.bio,
     required this.link,
     required this.birthday,
-    required this.hasAvatar,
+    this.avatarUrl,
   });
 
   UserProfileModel.empty()
@@ -24,18 +24,18 @@ class UserProfileModel {
         bio = "",
         link = "",
         birthday = "",
-        hasAvatar = false;
+        avatarUrl = null;
 
   UserProfileModel.fromJson(Map<String, dynamic> json)
-      : uid = json["uid"],
-        email = json["email"],
-        name = json["name"],
-        bio = json["bio"],
-        link = json["link"],
-        birthday = json["birthday"],
-        hasAvatar = json["hasAvatar"] ?? false;
+      : uid = json["uid"] ?? '',
+        email = json["email"] ?? '',
+        name = json["name"] ?? '',
+        bio = json["bio"] ?? '',
+        link = json["link"] ?? '',
+        birthday = json["birthday"] ?? '',
+        avatarUrl = json["avatarUrl"];
 
-  Map<String, String> toJson() {
+  Map<String, dynamic> toJson() {
     return {
       "uid": uid,
       "email": email,
@@ -43,6 +43,7 @@ class UserProfileModel {
       "bio": bio,
       "link": link,
       "birthday": birthday,
+      "avatarUrl": avatarUrl,
     };
   }
 
@@ -53,7 +54,7 @@ class UserProfileModel {
     String? bio,
     String? link,
     String? birthday,
-    bool? hasAvatar,
+    String? avatarUrl,
   }) {
     return UserProfileModel(
       uid: uid ?? this.uid,
@@ -62,7 +63,7 @@ class UserProfileModel {
       bio: bio ?? this.bio,
       link: link ?? this.link,
       birthday: birthday ?? this.birthday,
-      hasAvatar: hasAvatar ?? this.hasAvatar,
+      avatarUrl: avatarUrl ?? this.avatarUrl,
     );
   }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tiktok_clone/constants/gaps.dart';
-import 'package:tiktok_clone/constants/sizes.dart';
-import 'package:tiktok_clone/features/authentication/views/widgets/form_button.dart';
+import 'package:deentok/constants/gaps.dart';
+import 'package:deentok/constants/sizes.dart';
+import 'package:deentok/features/authentication/views/widgets/form_button.dart';
 
 import 'email_screen.dart';
 

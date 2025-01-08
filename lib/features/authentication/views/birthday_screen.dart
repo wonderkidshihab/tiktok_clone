@@ -1,10 +1,10 @@
+import 'package:deentok/constants/gaps.dart';
+import 'package:deentok/constants/sizes.dart';
+import 'package:deentok/features/authentication/view_models/signup_view_model.dart';
+import 'package:deentok/features/authentication/views/widgets/form_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:tiktok_clone/constants/gaps.dart';
-import 'package:tiktok_clone/constants/sizes.dart';
-import 'package:tiktok_clone/features/authentication/view_models/signup_view_model.dart';
-import 'package:tiktok_clone/features/authentication/views/widgets/form_button.dart';
 
 class BirthdayScreen extends ConsumerStatefulWidget {
   const BirthdayScreen({super.key});
@@ -21,8 +21,7 @@ class _BirthdayScreenState extends ConsumerState<BirthdayScreen> {
   void initState() {
     super.initState();
     DateTime currentDate = DateTime.now();
-    initialDate =
-        DateTime(currentDate.year - 12, currentDate.month, currentDate.day);
+    initialDate = DateTime(currentDate.year - 12, currentDate.month, currentDate.day);
     _setTextFieldDate(initialDate);
   }
 
@@ -104,18 +103,16 @@ class _BirthdayScreenState extends ConsumerState<BirthdayScreen> {
                 payload: 'Next',
               ),
             ),
+            Expanded(
+              child: CupertinoDatePicker(
+                mode: CupertinoDatePickerMode.date,
+                initialDateTime: initialDate,
+                onDateTimeChanged: (DateTime date) {
+                  _setTextFieldDate(date);
+                },
+              ),
+            ),
           ],
-        ),
-      ),
-      bottomNavigationBar: BottomAppBar(
-        child: SizedBox(
-          height: 300,
-          child: CupertinoDatePicker(
-            maximumDate: initialDate,
-            initialDateTime: initialDate,
-            mode: CupertinoDatePickerMode.date,
-            onDateTimeChanged: _setTextFieldDate,
-          ),
         ),
       ),
     );

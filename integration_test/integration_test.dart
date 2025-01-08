@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
-import 'package:tiktok_clone/firebase_options.dart';
-import 'package:tiktok_clone/main.dart';
+import 'package:deentok/firebase_options.dart';
+import 'package:deentok/main.dart';
 
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
